@@ -2,8 +2,8 @@
 using namespace std;
 /**
  * 算法思想：1、把数组arr以gap大小进行分组，对每一组分别进行插入排序；
- *			 2、当每一组的排序完成后，更改将gap的大小变为原来的一半，再
- *			    执行步骤1，直到gap < 1
+ *	     2、当每一组的排序完成后，更改将gap的大小变为原来的一半，再
+ *		执行步骤1，直到gap < 1
  */
 void shellSort(int *arr, int size)
 {
