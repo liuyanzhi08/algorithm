@@ -21,7 +21,7 @@ int KMPMatch(char *text, char *pattern)
     next[i] = 0;
   }
   //next[0],next[1]均为0，只需要求next[2]..next[size+1]
-  for(i = 1; i < size; i++)
+for(i = 1; i < size; i++)
   {
     int j = i;
     while(j > 0)
