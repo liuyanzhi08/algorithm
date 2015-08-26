@@ -7,7 +7,7 @@ using namespace std;
  *    i停止移动，另j=next[j]，如果动作令text[i+1] == pattern[j+1]，则i、j继续往前移动，
  *    否则，再令j=next[j]，直至text[i+1] == pattern[j+1]，如果当j=0时也无法使
  *    text[i+1] == pattern[j+1]，则保持j不变，移动i。
- * 3、当j= length(pattern)的时候匹配成功;
+ * 3、当j = length(pattern)的时候匹配成功;
  */
 int KMPMatch(char *text, char *pattern)
 {
