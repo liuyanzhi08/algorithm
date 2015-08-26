@@ -1,12 +1,13 @@
 #include <iostream>
 using namespace std;
 /**
- * 算法思想：1、求解next[i]数组：next[i]=max{k|pattern[0..k-1]..pattern[i-k+1..i]}
- *	        2、用i，j分别指向text和pattern，i和j依次往前移动，当text[i+1] != pattern[j+1]的时候，
- *		        i停止移动，另j=next[j]，如果动作令text[i+1] == pattern[j+1]，则i、j继续往前移动，
- *	         否则，再令j=next[j]，直至text[i+1] == pattern[j+1]，如果当j=0时也无法使
- *	         text[i+1] == pattern[j+1]，则保持j不变，移动i。
- *	       3、当j= length(pattern)的时候匹配成功;
+ * 算法思想：
+ * 1、求解next[i]数组：next[i]=max{k|pattern[0..k-1]..pattern[i-k+1..i]}
+ * 2、用i，j分别指向text和pattern，i和j依次往前移动，当text[i+1] != pattern[j+1]的时候，
+ *		i停止移动，另j=next[j]，如果动作令text[i+1] == pattern[j+1]，则i、j继续往前移动，
+ *	  否则，再令j=next[j]，直至text[i+1] == pattern[j+1]，如果当j=0时也无法使
+ *	   text[i+1] == pattern[j+1]，则保持j不变，移动i。
+ *	3、当j= length(pattern)的时候匹配成功;
  */
 int KMPMatch(char *text, char *pattern)
 {
